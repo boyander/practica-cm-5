@@ -31,8 +31,8 @@ $( document ).ready(function() {
         });
     }
 
-    var Bola = function(start_pos){
-        this.position = {x:start_pos.x, y:start_pos.y};
+    var Bola = function(start_pos_x, start_pos_y){
+        this.position = {x:start_pos_x, y:start_pos_y};
         this.color_bola = "#FF0000";
         this.size = {w:5, h:5};
         this.angle = 45;
@@ -50,13 +50,10 @@ $( document ).ready(function() {
     var pala_L = new Pala(10,canvas.height);
     var pala_R = new Pala(canvas.width-20,canvas.height);
 
-    pala_L.setKeys(81,65);
-    pala_R.setKeys(87,83);
+    pala_L.setKeys(81,65); // Keys: Q, A
+    pala_R.setKeys(87,83); // Keys: W, S
 
-    var bola = new Bola({
-        x:canvas.width/2,
-        y:canvas.height/2
-    });
+    var bola = new Bola(canvas.width/2, canvas.height/2);
 
 
     function render(){
