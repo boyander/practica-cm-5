@@ -35,7 +35,7 @@ $( document ).ready(function() {
         this.position = {x:start_pos_x, y:start_pos_y};
         this.color_bola = "#FF0000";
         this.size = {w:5, h:5};
-        this.angle = 45;
+        this.angle =  170;
     }
     Bola.prototype.render = function(ctx){
         ctx.fillStyle = this.color_bola;
@@ -55,8 +55,21 @@ $( document ).ready(function() {
 
     var bola = new Bola(canvas.width/2, canvas.height/2);
 
+    function updateBola(){
+
+        if(bola.position.y < 10){
+            bola.angle -=180;
+        } else if(bola.position.y > canvas.height){
+            bola.angle -=180;
+        }
+
+        bola.position.x += Math.sin(bola.angle * Math.PI / 180.0) * 3;
+        bola.position.y += Math.cos(bola.angle * Math.PI / 180.0) * 3;
+    }
 
     function render(){
+
+        updateBola();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         //renderCampo(ctx);
         pala_L.render(ctx);
