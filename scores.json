@@ -1,38 +1,31 @@
-[
-  {
-    "id": 1,
-    "image_url": "http://content.sportslogos.net/logos/6/213/thumbs/slhg02hbef3j1ov4lsnwyol5o.gif",
-    "name": "Clase 1 - Alpha",
-    "score": 526
-  },
-  {
-    "id": 2,
-    "image_url": "http://content.sportslogos.net/logos/6/237/thumbs/uig7aiht8jnpl1szbi57zzlsh.gif",
-    "name": "Clase 2 - Beta",
-    "score": 2490
-  },
-  {
-    "id": 3,
-    "image_url": "http://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
-    "name": "Clase 3 - Charlie",
-    "score": 14300
-  },
-  {
-    "id": 4,
-    "image_url": "http://content.sportslogos.net/logos/6/217/thumbs/wd9ic7qafgfb0yxs7tem7n5g4.gif",
-    "name": "Clase 4 - Echo",
-    "score": 8700
-  },
-  {
-    "id": 5,
-    "image_url": "http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif",
-    "name": "Clase 5 - Delta",
-    "score": 2500
-  },
-  {
-    "id": 6,
-    "image_url": "http://content.sportslogos.net/logos/6/222/thumbs/e4701g88mmn7ehz2baynbs6e0.gif",
-    "name": "Clase 6 - Foxtrot",
-    "score": 1300
-  }
-]
+[{
+  "id": 1,
+  "image_url": "http://content.sportslogos.net/logos/6/213/thumbs/slhg02hbef3j1ov4lsnwyol5o.gif",
+  "name": "Clase 1 - Alpha",
+  "score": 526
+}, {
+  "id": 2,
+  "image_url": "http://content.sportslogos.net/logos/6/237/thumbs/uig7aiht8jnpl1szbi57zzlsh.gif",
+  "name": "Clase 2 - Beta",
+  "score": 2490
+}, {
+  "id": 3,
+  "image_url": "http://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
+  "name": "Clase 3 - Charlie",
+  "score": 14300
+}, {
+  "id": 4,
+  "image_url": "http://content.sportslogos.net/logos/6/217/thumbs/wd9ic7qafgfb0yxs7tem7n5g4.gif",
+  "name": "Clase 4 - Echo",
+  "score": 8700
+}, {
+  "id": 5,
+  "image_url": "http://content.sportslogos.net/logos/6/216/thumbs/2nn48xofg0hms8k326cqdmuis.gif",
+  "name": "Clase 5 - Delta",
+  "score": 2500
+}, {
+  "id": 6,
+  "image_url": "http://content.sportslogos.net/logos/6/222/thumbs/e4701g88mmn7ehz2baynbs6e0.gif",
+  "name": "Clase 6 - Foxtrot",
+  "score": 1300
+}]
