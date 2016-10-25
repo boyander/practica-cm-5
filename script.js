@@ -1,14 +1,70 @@
 
 $( document ).ready(function() {
-    var pos = 0;
+    var Pala = function(x_start,y_end){
+        this.color_pala = "#336699";
+        this.position = {x:x_start, y:0};
+        this.size = {w:3, h:40};
+        this.y_end = y_end;
+    };
+    Pala.prototype.render = function(ctx){
+        ctx.fillStyle = this.color_pala;
+        ctx.fillRect(   this.position.x,
+                        this.position.y,
+                        this.size.w,
+                        this.size.h);
+    };
+    Pala.prototype.goUp = function(){
+        if(this.position.y >= 0) this.position.y -= 10;
+    };
+    Pala.prototype.goDown = function(){
+        if(this.position.y+this.size.h <= this.y_end) this.position.y += 10;
+    };
+    Pala.prototype.setKeys = function(keyUp, keyDown){
+        var _this = this;
+        $(window).keydown(function(event) {
+            //console.log("Key pressed is: " +event.which);
+            if ( event.which == keyUp ) {
+                _this.goUp()
+            }else if( event.which == keyDown ){
+                _this.goDown();
+            }
+        });
+    }
+
+    var Bola = function(start_pos){
+        this.position = {x:start_pos.x, y:start_pos.y};
+        this.color_bola = "#FF0000";
+        this.size = {w:5, h:5};
+        this.angle = 45;
+    }
+    Bola.prototype.render = function(ctx){
+        ctx.fillStyle = this.color_bola;
+        ctx.fillRect(   this.position.x,
+                        this.position.y,
+                        this.size.w,
+                        this.size.h);
+    }
+
+    var canvas = document.getElementById("mycanvas");
+    var ctx = canvas.getContext("2d");
+    var pala_L = new Pala(10,canvas.height);
+    var pala_R = new Pala(canvas.width-20,canvas.height);
+
+    pala_L.setKeys(81,65);
+    pala_R.setKeys(87,83);
+
+    var bola = new Bola({
+        x:canvas.width/2,
+        y:canvas.height/2
+    });
+
+
     function render(){
-        var canvas = document.getElementById("mycanvas");
-        var ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#336699";
-        ctx.fillRect(10+pos,10+pos,100,100);
-        pos = (pos + 5) % 50;
-        console.log(pos);
+        //renderCampo(ctx);
+        pala_L.render(ctx);
+        pala_R.render(ctx);
+        bola.render(ctx);
     };
     setInterval(render, 100);
 });
